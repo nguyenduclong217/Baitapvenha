@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDos App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <style>
+      ul li {
+        margin: 10px 0;
+        /* background-color: cadetblue; */
+        /* padding: 8px 15px; */
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+      }
+      ul li span {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="h-screen max-w-[100%] bg-violet-700 flex items-start">
+      <div class="h mx-auto mt-[100px] w-[400px] bg-[#1a1a40] rounded-md">
+        <h1 class="text-center my-6 text-white text-[1.7rem]">
+          Get Things Done !
+        </h1>
+        <form
+          class="form1 flex w-[85%] m-auto border border-violet-700 my-[20px]"
+        >
+          <input
+            type="text"
+            placeholder="What the task today?"
+            class="px-3 py-2 w-[75%] bg-[#1a1a40] outline-none text-white"
+          />
+          <button class="bg-violet-700 text-white p-1 w-[25%]">Add Task</button>
+        </form>
+        <ul class="list w-[85%] mx-auto"></ul>
+      </div>
+    </div>
+    <script src="/bt.js"></script>
+  </body>
+</html>
