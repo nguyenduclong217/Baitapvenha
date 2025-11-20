@@ -110,9 +110,15 @@ function addTask() {
   // Xoa task
   deleteTask.addEventListener("click", (e) => {
     e.stopPropagation();
-    li.remove();
+    if (confirm("Bạn có chắc muốn xoá task này?")) {
+      li.remove();
+    }
   });
   p.addEventListener("click", () => {
+    p.classList.remove("text-white");
+
+    console.log(p);
+    p.classList.toggle("text-gray-300");
     p.classList.toggle("line-through");
   });
   // Sua task
@@ -132,7 +138,6 @@ function addTask() {
   button.addEventListener("click", (e) => {
     e.stopPropagation();
     p.textContent = input.value.trim();
-    // if (p.textContent === "")
     if (input.value.trim() === "") {
       let errol = li.querySelector(".errol-title");
       if (!errol) {
@@ -144,18 +149,15 @@ function addTask() {
       errol.classList.remove("hidden");
       return;
     }
-    // errol.classList.add("hidden");
     const errol = li.querySelector(".errol-title");
     if (errol) errol.classList.add("hidden");
     fix.classList.add("hidden");
-    // console.log(errol);
   });
 
   ul.appendChild(li);
   inputEl.value = "";
 }
-// Sua task
-// ket thuc
+
 btn.addEventListener("click", (e) => {
   e.preventDefault();
   addTask();
