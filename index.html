@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+      span.dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: darkgrey;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      span.dot.active {
+        background-color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="carousel h-[300px] bg-green-400 relative w-[980px] mx-auto mt-[20px]"
+    >
+      <div
+        class="carousel-image flex h-[300px] transition-transform duration-3000 ease"
+      >
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/0/536/354.jpg?hmac=pYva7VotLDyw33JFwZdFMkf5Egtdk2Z6p7Rr8nO6ngs"
+            alt="img"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/1026/536/354.jpg?hmac=HCbe18ElwrIr-HhIHYt2HVHDsIIZobiAYjNONKQ-xz4"
+            alt="img"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/927/536/354.jpg?hmac=OuFErMeN38u2De0WomefbRuytirCpHz8OqOnO3hU-I8"
+            alt="img"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/726/536/354.jpg?hmac=FBkUFAy5tLDmdflwFe5vGrkfg1gvAI8B8QGbb-h8apM"
+            alt="img"
+          />
+        </div>
+      </div>
+      <div class="carousel-nav absolute top-[48%] w-[100%] flex">
+        <button
+          class="next-left px-4 py-1 bg-[#94a3b83d] ml-[20px] text-[2.1rem] font-bold text-white"
+        >
+          <
+        </button>
+        <button
+          class="next-right ml-auto px-4 py-1 mr-[20px] bg-[#94a3b83d] text-[2.1rem] font-bold text-white"
+        >
+          >
+        </button>
+      </div>
+      <div
+        class="carousel-dot absolute top-[93%] mx-auto w-full flex justify-center"
+      ></div>
+    </div>
+
+    <script src="bt.js"></script>
+  </body>
+</html>
