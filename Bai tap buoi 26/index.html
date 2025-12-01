@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      ul {
+        display: inline-block;
+        margin-top: 30px;
+        border: 1px solid red;
+        padding: 8px;
+      }
+      li {
+        padding: 20px;
+        display: flex;
+      }
+      .up {
+        color: green;
+        margin-left: auto;
+      }
+      .down {
+        color: red;
+      }
+      .up,
+      .down {
+        cursor: pointer;
+        padding-right: 9px;
+      }
+      .active {
+        /* padding: 4px; */
+        border: 1px dotted red;
+      }
+      .box-content {
+        /* display: flex; */
+        flex-direction: column;
+        width: 80px;
+        background-color: wheat;
+        position: absolute;
+      }
+      .box-content button {
+        outline: none;
+        border: none;
+        padding: 5px;
+        width: 100%;
+      }
+      #rename-box {
+        position: absolute;
+      }
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.384);
+      }
+
+      #rename-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .rename:hover,
+      .delete:hover {
+        color: white;
+        background: rgba(0, 0, 0, 0.842);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box w-[90%] mx-[20px] my-auto">
+      <ul class="w-[300px]">
+        <li class="title">
+          Item 1
+          <span class="up">Up </span>
+          <span class="down">Down </span>
+        </li>
+        <li class="title">
+          Item 2
+          <span class="up">Up </span>
+          <span class="down">Down </span>
+        </li>
+        <li class="title">
+          Item 3
+          <span class="up">Up </span>
+          <span class="down">Down </span>
+        </li>
+        <li class="title">
+          Item 4
+          <span class="up">Up </span>
+          <span class="down">Down </span>
+        </li>
+        <li class="title">
+          Item 5
+          <span class="up">Up </span>
+          <span class="down">Down </span>
+        </li>
+      </ul>
+      <div class="box-content hidden">
+        <button class="rename">Rename</button>
+        <button class="delete">Delete</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <div id="rename-box" class="hidden bg-green-400">
+      <h1 class="py-1">Rename</h1>
+      <div class="input-group">
+        <input type="text" id="rename-input" class="px-[8px]" />
+        <button
+          class="submit px-2 bg-green-500 text-white rounded-sm hover:bg-green-800"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+    <script src="./baitap.js"></script>
+  </body>
+</html>
